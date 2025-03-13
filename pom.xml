@@ -50,6 +50,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Akka Actor -->
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-actor_2.12</artifactId>
+			<version>2.4.14</version>
+		</dependency>
+
+		<!-- Akka Remote -->
+		<dependency>
+			<groupId>com.typesafe.akka</groupId>
+			<artifactId>akka-remote_2.12</artifactId>
+			<version>2.4.14</version>
+		</dependency>
 	</dependencies>
 
 	<build>
