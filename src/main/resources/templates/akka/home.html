@@ -13,13 +13,24 @@
     <button type="submit">Initialiser</button>
 </form>
 
-<!-- Message de succès -->
-<p th:if="${message}" th:text="${message}" style="color: green;"></p>
-<p th:if="${error}" th:text="${error}" style="color: red;"></p>
+
+<hr>
+<h2>Charger un fichier à analyser</h2>
+<form th:action="@{/akka/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Analyser</button>
+</form>
 
 <hr>
 
+<h2>Rechercher un mot</h2>
+<form th:action="@{/akka/search}" method="get">
+    <input type="text" name="word" placeholder="Entrez un mot..." required>
+    <button type="submit">Chercher</button>
+</form>
 
+<!-- Afficher les résultats de la recherche -->
+<p th:if="${message}" th:text="${message}" style="font-weight: bold;"></p>
 
 </body>
 </html>
