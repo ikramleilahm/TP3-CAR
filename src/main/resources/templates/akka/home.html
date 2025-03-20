@@ -7,33 +7,19 @@
 <body>
 
 <h1>TP3 Akka - MapReduce</h1>
-
-<!-- Section 1 : Initialisation des acteurs Akka -->
-<h2> Initialisation des acteurs Akka</h2>
-<p>Cliquez sur le bouton ci-dessous pour initialiser les acteurs Akka.</p>
-<form th:action="@{/api/init}" method="post">
-    <button type="submit">Initialiser Akka</button>
+<h2>Initialisation des acteurs Akka</h2>
+<p>Cliquez sur le bouton ci-dessous pour initialiser les acteurs Akka :</p>
+<form th:action="@{/akka/init}" method="post">
+    <button type="submit">Initialiser</button>
 </form>
+
+<!-- Message de succès -->
+<p th:if="${message}" th:text="${message}" style="color: green;"></p>
+<p th:if="${error}" th:text="${error}" style="color: red;"></p>
 
 <hr>
 
-<!-- Section 2 : Charger un fichier à analyser -->
-<h2> Charger un fichier à analyser</h2>
-<p>Sélectionnez un fichier texte contenant les données à analyser.</p>
-<form th:action="@{/api/process-file}" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" required>
-    <button type="submit">Analyser le fichier</button>
-</form>
 
-<hr>
-
-<!-- Section 3 : Recherche d'occurrences d'un mot -->
-<h2> Rechercher un mot</h2>
-<p>Entrez un mot pour obtenir le nombre de fois qu'il apparaît.</p>
-<form th:action="@{/api/count-word}" method="get">
-    <input type="text" name="word" placeholder="Entrez un mot..." required>
-    <button type="submit">Chercher</button>
-</form>
 
 </body>
 </html>

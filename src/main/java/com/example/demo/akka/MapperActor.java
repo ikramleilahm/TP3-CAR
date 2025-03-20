@@ -7,6 +7,7 @@ public class MapperActor extends UntypedActor {
     private final ActorRef[] reducers;
 
     public MapperActor(ActorRef[] reducers) {
+
         this.reducers = reducers;
     }
     @Override
